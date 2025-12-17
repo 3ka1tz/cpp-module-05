@@ -18,7 +18,7 @@ int main()
         std::cerr << RED << e.what() << RESET << std::endl;
     }
 
-    std::cout << "\n" << BLUE << "Test 1: Valid Grade" << RESET << std::endl;
+    std::cout << "\n" << BLUE << "Test 1: Valid Bureaucrat" << RESET << std::endl;
     try
     {
         Bureaucrat a("Alice", 42);
@@ -29,7 +29,7 @@ int main()
         std::cerr << RED << e.what() << RESET << std::endl;
     }
 
-    std::cout << "\n" << BLUE << "Test 2: Too High Grade" << RESET << std::endl;
+    std::cout << "\n" << BLUE << "Test 2: Too High Grade Bureaucrat" << RESET << std::endl;
     try
     {
         Bureaucrat b("Bob", 0);
@@ -40,7 +40,7 @@ int main()
         std::cerr << RED << e.what() << RESET << std::endl;
     }
 
-    std::cout << "\n" << BLUE << "Test 3: Too Low Grade" << RESET << std::endl;
+    std::cout << "\n" << BLUE << "Test 3: Too Low Grade Bureaucrat" << RESET << std::endl;
     try
     {
         Bureaucrat c("eve", 151);

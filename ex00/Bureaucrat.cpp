@@ -64,9 +64,9 @@ void Bureaucrat::decrementGrade()
 
 // Grade outside of bounds exceptions --------------------------------------------------------------
 
-const char* Bureaucrat::GradeTooHighException::what() const throw() { return "Grade is too high!"; }
+const char* Bureaucrat::GradeTooHighException::what() const throw() { return "Bureaucrat grade is too high!"; }
 
-const char* Bureaucrat::GradeTooLowException::what() const throw() { return "Grade is too low!"; }
+const char* Bureaucrat::GradeTooLowException::what() const throw() { return "Bureaucrat grade is too low!"; }
 
 
 // Overload of the insertion operator --------------------------------------------------------------
