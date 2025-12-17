@@ -62,7 +62,7 @@ void Bureaucrat::decrementGrade()
 }
 
 
-// Grade outside bounds exceptions -----------------------------------------------------------------
+// Grade outside of bounds exceptions --------------------------------------------------------------
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() { return "Grade is too high!"; }
 
@@ -73,7 +73,7 @@ const char* Bureaucrat::GradeTooLowException::what() const throw() { return "Gra
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
 {
-    os << b.getName() << ", bureaucrat grade " << b.getGrade() << std::endl;
+    os << b.getName() << ", bureaucrat grade " << b.getGrade() << "." << std::endl;
 
     return os;
 }

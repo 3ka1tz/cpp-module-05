@@ -8,6 +8,17 @@
 
 int main()
 {
+    std::cout << "\n" << BLUE << "Test 0: Default Constructor" << RESET << std::endl;
+    try
+    {
+        Bureaucrat x;
+        std::cout << x;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << RED << e.what() << RESET << std::endl;
+    }
+
     std::cout << "\n" << BLUE << "Test 1: Valid Grade" << RESET << std::endl;
     try
     {
