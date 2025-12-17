@@ -1,5 +1,4 @@
 #include "Bureaucrat.hpp"
-
 #include <iostream>
 
 #define RED "\033[31m"
@@ -8,7 +7,7 @@
 
 int main()
 {
-    std::cout << "\n" << BLUE << "Test 0: Default Constructor" << RESET << std::endl;
+    std::cout << "\n" << BLUE << "Test 0: Default Bureaucrat" << RESET << std::endl;
     try
     {
         Bureaucrat x;
@@ -30,7 +29,7 @@ int main()
         std::cerr << RED << e.what() << RESET << std::endl;
     }
 
-    std::cout << "\n" << BLUE << "Test 2: Invalid Too High Grade" << RESET << std::endl;
+    std::cout << "\n" << BLUE << "Test 2: Too High Grade" << RESET << std::endl;
     try
     {
         Bureaucrat b("Bob", 0);
@@ -41,7 +40,7 @@ int main()
         std::cerr << RED << e.what() << RESET << std::endl;
     }
 
-    std::cout << "\n" << BLUE << "Test 3: Invalid Too Low Grade" << RESET << std::endl;
+    std::cout << "\n" << BLUE << "Test 3: Too Low Grade" << RESET << std::endl;
     try
     {
         Bureaucrat c("eve", 151);
