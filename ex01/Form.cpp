@@ -1,7 +1,8 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-// Orthodox Canonical Class Form -------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Orthodox Canonical Class Form
 
 Form::Form() :
     name("Default Form"),
@@ -40,14 +41,14 @@ Form& Form::operator=(const Form& other)
         // 'name', 'gradeToSign' and 'gradeToExecute' are const members, so they cannot be reassigned
         isSigned = other.isSigned;
     }
-
     return *this;
 }
 
 Form::~Form() {}
 
 
-// Getters -----------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Getters
 
 const std::string& Form::getName() const { return name; }
 
@@ -58,14 +59,16 @@ int Form::getGradeToSign() const { return gradeToSign; }
 int Form::getGradeToExecute() const { return gradeToExecute; }
 
 
-// Form grade outside of bounds exceptions ---------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Form grade outside of bounds exceptions
 
 const char* Form::GradeTooHighException::what() const throw() { return "Form grade is too high!"; }
 
 const char* Form::GradeTooLowException::what() const throw() { return "Form grade is too low!"; }
 
 
-// Be Signed ---------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Be Signed
 
 void Form::beSigned(const Bureaucrat& bureaucrat)
 {
@@ -78,11 +81,11 @@ void Form::beSigned(const Bureaucrat& bureaucrat)
 }
 
 
-// Overload of the insertion operator --------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Overload of the insertion operator
 
 std::ostream& operator<<(std::ostream& os, const Form& f)
 {
     os << f.getName() << ": isSigned = " << (f.getIsSigned() ? "yes" : "no") << ", gradeToSign = " << f.getGradeToSign() << ", gradeToExecute = " << f.getGradeToExecute() << ";" << std::endl;
-
     return os;
 }

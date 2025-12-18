@@ -6,7 +6,8 @@
 #define GREEN "\033[32m"
 #define RESET "\033[0m"
 
-// Orthodox Canonical Class Form -------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Orthodox Canonical Class Form
 
 Bureaucrat::Bureaucrat() : name("Default"), grade(150) {}
 
@@ -31,21 +32,22 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
         // 'name' is a const member, so it cannot be reassigned
         grade = other.grade;
     }
-
     return *this;
 }
 
 Bureaucrat::~Bureaucrat() {}
 
 
-// Getters -----------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Getters
 
 const std::string& Bureaucrat::getName() const { return name; }
 
 int Bureaucrat::getGrade() const { return grade; }
 
 
-// Grade incrementor and decrementor functions -----------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Grade incrementor and decrementor functions
 
 void Bureaucrat::incrementGrade()
 {
@@ -68,14 +70,16 @@ void Bureaucrat::decrementGrade()
 }
 
 
-// Bureaucrat grade outside of bounds exceptions ---------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Bureaucrat grade outside of bounds exceptions
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() { return "Bureaucrat grade is too high!"; }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw() { return "Bureaucrat grade is too low!"; }
 
 
-// Sign Form ---------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Sign Form
 
 void Bureaucrat::signForm(Form& form) const
 {
@@ -91,11 +95,11 @@ void Bureaucrat::signForm(Form& form) const
 }
 
 
-// Overload of the insertion operator --------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Overload of the insertion operator
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
 {
     os << b.getName() << ", bureaucrat grade " << b.getGrade() << "." << std::endl;
-
     return os;
 }
