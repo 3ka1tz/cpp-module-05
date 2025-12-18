@@ -60,7 +60,7 @@ int Form::getGradeToExecute() const { return gradeToExecute; }
 
 
 // -------------------------------------------------------------------------------------------------
-// Form grade outside of bounds exceptions
+// Exceptions
 
 const char* Form::GradeTooHighException::what() const throw() { return "Form grade is too high!"; }
 
@@ -68,7 +68,7 @@ const char* Form::GradeTooLowException::what() const throw() { return "Form grad
 
 
 // -------------------------------------------------------------------------------------------------
-// Be Signed
+// Be signed function
 
 void Form::beSigned(const Bureaucrat& bureaucrat)
 {
