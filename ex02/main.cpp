@@ -15,17 +15,23 @@
 int main() {
     srand(time(NULL));
 
-    std::cout << "\n" << BLUE << "Test 1: Presidential Pardon Form" << RESET << "\n";
-    try {
+    std::cout << "\n" << BLUE << "Test 1: Presidential Pardon Form" << RESET << std::endl;
+    try
+    {
         Bureaucrat alice("Alice", 5);
         std::cout << alice;
-        PresidentialPardonForm PPForm("Amy");
+        PresidentialPardonForm PPForm;
         std::cout << PPForm;
         alice.signForm(PPForm);
+
+        std::cout << std::endl;
+
         std::cout << PPForm;
         alice.executeForm(PPForm);
-    } catch (const std::exception& e) {
-        std::cerr << RED << e.what() << RESET << "\n";
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << RED << e.what() << RESET << std::endl;
     }
 
     std::cout << "\n" << BLUE << "Test 2: Robotomy Request Form" << RESET << "\n";
