@@ -1,6 +1,7 @@
 #include "Bureaucrat.hpp"
 
-// Orthodox Canonical Class Form -------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Orthodox Canonical Class Form
 
 Bureaucrat::Bureaucrat() : name("Default"), grade(150) {}
 
@@ -32,14 +33,16 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 Bureaucrat::~Bureaucrat() {}
 
 
-// Getters -----------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Getters
 
 const std::string& Bureaucrat::getName() const { return name; }
 
 int Bureaucrat::getGrade() const { return grade; }
 
 
-// Grade incrementor and decrementor functions -----------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Grade incrementor and decrementor functions
 
 void Bureaucrat::incrementGrade()
 {
@@ -62,14 +65,16 @@ void Bureaucrat::decrementGrade()
 }
 
 
-// Grade outside of bounds exceptions --------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Grade outside of bounds exceptions
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() { return "Bureaucrat grade is too high!"; }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw() { return "Bureaucrat grade is too low!"; }
 
 
-// Overload of the insertion operator --------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+// Overload of the insertion operator
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
 {
