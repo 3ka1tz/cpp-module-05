@@ -26,7 +26,6 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
         // 'name' is a const member, so it cannot be reassigned
         grade = other.grade;
     }
-
     return *this;
 }
 
@@ -79,6 +78,5 @@ const char* Bureaucrat::GradeTooLowException::what() const throw() { return "Bur
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
 {
     os << b.getName() << ", bureaucrat grade " << b.getGrade() << "." << std::endl;
-
     return os;
 }
